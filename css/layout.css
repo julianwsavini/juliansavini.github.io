@@ -129,6 +129,11 @@ body {
   height: auto;
 }
 
+.project-header-image-small {
+  width: 50%;
+  height: 50%;
+}
+
 #project-details {
   display: flex;
   flex-direction: column;
