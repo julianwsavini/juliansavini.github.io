@@ -166,6 +166,14 @@ body {
       width: calc((100% - 16px) / 2);
     }
 
+    .gallery-image-container.three-width {
+      width: calc((100% - 16px) / (4/3)
+    }
+
+    .gallery-image-container.one-width {
+      width: calc((100% - 16px) / 4)
+    }
+
     .gallery-image {
       width: 100%;
       height: auto;
