@@ -167,17 +167,16 @@ body {
     }
 
     .gallery-image-container.three-width {
-      width: 75%;
+      width: 74%;
     }
 
     .gallery-image-container.one-width {
-      width: 25%;
+      width: 24%;
     }
 
     .gallery-image {
       width: 100%;
       height: auto;
-      display: block;
     }
 
 
