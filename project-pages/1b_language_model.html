@@ -1,74 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A portfolio template for the Unemployables community." />
     <link rel="icon" href="../assets/images/1311.png" />
     <title>Unemployables Portfolio</title>
-    <meta name="description" content="A portfolio template for the Unemployables community.">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/typography.css">
     <link rel="stylesheet" href="../css/utilities.css">
-		<script defer src="../js/script.js"></script>
-	</head>
-	<body>
+    <script defer src="../js/script.js"></script>
+  </head>
+  <body>
     <!-- NAVBAR -->
-    <div class="navbar">
+    <header class="navbar" role="banner">
       <a class="nav-title-link" href="../index.html">
         <span class="nav-title">Portfolio Title</span>
-        <a class="button" href="mailto:whitevans.eth@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
       </a>
-    </div>
+      <a class="button" href="mailto:whitevans.eth@gmail.com">
+        <span class="button-text">Contact Me</span>
+      </a>
+    </header>
 
     <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
-
+    <main id="main-content">
       <!-- PROJECT HEADER -->
-      <div id="project-header">
+      <section id="project-header">
         <div class="main-title">Flagship LLM Project</div>
         <div class="body-text">Demonstrating the advanced problem-solving abilities of undergraduate co-ops under limited supervision. This project showcases innovation, technical expertise, and perseverance.</div>
-      </div>
+      </section>
 
       <!-- PROJECT DETAILS -->
-      <div id="project-details">
+      <section id="project-details">
         <div class="subheader-text">Project Details / Background</div>
         <div class="project-details-content">
-          <div class="body-text">This project was a flagship initiative for the Roux Institute, showcasing that undergraduate co-ops can tackle advanced problems with minimal supervision. The primary challenge was building a large language model (LLM) with limited hardware resources, including personal laptops and one A100 GPU. My role required developing a deep understanding of transformer architectures, particularly GPT, and fine-tuning parameters like dropout probabilities, batch size, and model dimensions to optimize performance.</div>
-
-          <div class="body-text">The project aimed to balance minimizing the model's perplexity while ensuring it completed training within a tight deadline of December 13. Below are some of the key challenges and solutions:</div>
-
+          <p class="body-text">This project was a flagship initiative for the Roux Institute, showcasing that undergraduate co-ops can tackle advanced problems with minimal supervision. The primary challenge was building a large language model (LLM) with limited hardware resources, including personal laptops and one A100 GPU. My role required developing a deep understanding of transformer architectures, particularly GPT, and fine-tuning parameters like dropout probabilities, batch size, and model dimensions to optimize performance.</p>
+          <p class="body-text">The project aimed to balance minimizing the model's perplexity while ensuring it completed training within a tight deadline of December 13. Below are some of the key challenges and solutions:</p>
           <div class="subheader-text">Challenges and Solutions</div>
-          
-          <div class="body-text"><strong>Computation:</strong> We had to ensure sufficient computing power to complete training in under two months. I gained access to Northeastern's Discovery Cluster, a high-performance computing resource, where I learned to manage SLURM files and queue jobs efficiently. Additionally, I estimated the required floating-point operations (FLOPs) to train the 1B parameter model and projected the total training time.</div>
-
-          <div class="body-text"><strong>Storage:</strong> As the model grew to 700M parameters, each snapshot reached approximately 3GB. GitHub's storage limits required alternative solutions. We stored SLURM files locally on the Discovery Cluster and transferred them to OneDrive. For future scalability, we proposed an action plan to leverage AWS S3 for snapshot storage, ensuring continuity if further training was needed.</div>
-
-          <div class="body-text"><strong>Capacity:</strong> Managing disk space involved adjusting batch size and gradient accumulation to achieve efficiency while maintaining low perplexity. This iterative process balanced performance and resource constraints effectively.</div>
-
-          <div class="body-text"><strong>Evaluation:</strong> I developed a script to evaluate perplexity after each model snapshot, ensuring consistent performance tracking. This required a thorough understanding of GPT architecture and evaluation metrics.</div>
+          <p class="body-text"><strong>Computation:</strong> We had to ensure sufficient computing power to complete training in under two months. I gained access to Northeastern's Discovery Cluster, a high-performance computing resource, where I learned to manage SLURM files and queue jobs efficiently. Additionally, I estimated the required floating-point operations (FLOPs) to train the 1B parameter model and projected the total training time.</p>
+          <p class="body-text"><strong>Storage:</strong> As the model grew to 700M parameters, each snapshot reached approximately 3GB. GitHub's storage limits required alternative solutions. We stored SLURM files locally on the Discovery Cluster and transferred them to OneDrive. For future scalability, we proposed an action plan to leverage AWS S3 for snapshot storage, ensuring continuity if further training was needed.</p>
+          <p class="body-text"><strong>Capacity:</strong> Managing disk space involved adjusting batch size and gradient accumulation to achieve efficiency while maintaining low perplexity. This iterative process balanced performance and resource constraints effectively.</p>
+          <p class="body-text"><strong>Evaluation:</strong> I developed a script to evaluate perplexity after each model snapshot, ensuring consistent performance tracking. This required a thorough understanding of GPT architecture and evaluation metrics.</p>
         </div>
-      </div>
+      </section>
 
       <!-- IMAGE GALLERY -->
-      <div id="project-gallery">
+      <section id="project-gallery">
         <div class="subheader-text">Results</div>
         <div class="project-gallery-content">
-            <div class="gallery-image-container">
-              <img src="../assets/images/perplexity.png" class="gallery-image">
-              <span class="image-caption">Perplexity across 25 models, each model increasing by 40M parameters.</span>
-            </div>
+          <div class="gallery-image-container">
+            <img src="../assets/images/perplexity.png" class="gallery-image" alt="Graph showing perplexity across 25 models." />
+            <span class="image-caption">Perplexity across 25 models, each model increasing by 40M parameters.</span>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
 
     <!-- FOOTER -->
-    <div id="footer">
+    <footer id="footer" role="contentinfo">
       <a class="icon-link" href="mailto:savini.j@northeastern.edu">
-        <image src="../assets/icons/mail.svg" class="footer-icon"/>
+        <img src="../assets/icons/mail.svg" class="footer-icon" alt="Email icon" />
       </a>
-    </div>
-
-	</body>
+    </footer>
+  </body>
 </html>
