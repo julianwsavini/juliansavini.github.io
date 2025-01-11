@@ -36,12 +36,12 @@
       <div id="project-details">
         <div class="subheader-text">Project Overview</div>
         <div class="project-details-content">
-          <div class="body-text">During my data scientist co-op for the AI Solutions Hub at the Roux, I was tasked with working on a RAG project for Evity, a healthtech company focused on leveraging world-class health research with AI to enable healthier lives. The AI Solutions Hub developed a RAG model that utilized medical papers to generate exercise regimens for customers based on their health conditions. I led the evaluation effort, specifically measuring faithfulness—how well the outputs align with the medical papers.</div>
+          <div class="body-text">During my data scientist co-op for the AI Solutions Hub at the Roux, I was tasked with working on a RAG project for Evity, a healthtech company focused on leveraging world-class health research with AI to enable healthier lives. The AI Solutions Hub developed a RAG model that utilized medical papers to generate exercise regimens for customers based on their health conditions. I led the evaluation effort, specifically measuring faithfulness, or how well the outputs align with the medical papers.</div>
         </div>
 
         <div class="subheader-text">Initial Research and Implementation</div>
         <div class="project-details-content">
-          <div class="body-text">Initially, I researched multiple pre-existing evaluation frameworks by reading over 15 papers on RAG evaluation and reviewing documentation. I chose DeepEval for several reasons:
+          <div class="body-text">Initially, I researched multiple pre-existing evaluation frameworks by reading approximately 15 papers on RAG evaluation and reviewing documentation. I chose DeepEval for several reasons:
             <ul>
               <li>DeepEval compares individual RAG output statements (claims) with relevant medical paper statements (truths), providing transparency for each claim-truth pair.</li>
               <li>It labels claim-truth pairs as "supported," "not supported," or "no evidence," avoiding binary choices.</li>
@@ -49,8 +49,8 @@
             </ul>
             However, after reviewing the outputs, we identified limitations in DeepEval's framework:
             <ul>
-              <li>It fact-checks against the LLM's pre-trained knowledge, which contradicts faithfulness as adherence to retrieval context.</li>
-              <li>It relies on LLMs to decide "support," less effective for instruction-giving models where entailment matters more.</li>
+              <li>It fact-checks against the LLM's pre-trained knowledge, and therefore contradicts the fundamental notion of faithfulness, as it should only be checking adherence to the retrieval context.</li>
+              <li>It relies on LLMs to decide "supported," and this is less effective for instruction-giving models where entailment matters more.</li>
               <li>It struggles to compare imperative RAG outputs to declarative medical paper sentences.</li>
             </ul>
           </div>
